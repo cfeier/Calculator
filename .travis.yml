@@ -1,3 +1,10 @@
 language: java
 sudo: false
 script: mvn install
+deploy:
+  provider: releases
+  api_key:
+    secure: Wa7VIahdn2E98kb8WnR/V/s2MUu3xw42B5XPhQGgvnTEysgDwi8VKyV1bD/YQJn6ly6M6CzkyNHQgl7vjzfM8sTi//QiOG+C4/zGzMd0+xaZiE5XGHmJSJGyeEwxtmgcfhTrIG0/aEDKRWjOZN/tt2mQ76UF9+I8N6IkBh4329ncs0D2bIxNSF2e2SS7YbWvJaF67c+kN9VaKz+fiaIwNJW0SoMKkFPnoWQ0nc6LROc90zCY7oYgAwQOoUKC+1zD0FHNVjU/cGXJcF4bIOuSZZOo95tasPY4923w9KfH9wI3m+yKk/EOeh4U+NLllNCiqwQuPKF6tq40gEzcYlyA0tGu2jl8xp6OYOxmbfEMR/Sb02GZ++L09jJb4udyhWkVcAj4JFYqLW8LIYBOOOJXwiop5+QKrPY1/cvITPhrRw/TWW2EwHHFd/ZEJkEdF+zfGxgjpCvMGJW/TeQMIuo+YnhlfJ1bB0MnyGRWjyN2l5ARzCEcx04ScMZTyQAce0PhwCzXREA9Mr9zqNoTlXZibgEFlXIOoDKuCYRWFDcp+i37JZRKRZVz446u5V4nlk2iIwjnhnDb/po9yr0InNvfeutQ/zbBnNMOSL3QJY4mvgbBUNsS7rdk7ft7/34J3JIJ4eYVfOOPDoTpo0PRZBLm6z4oUTRwCfwKd4L/L6QZc5s=
+  file: '/home/travis/build/cfeier/Calculator/target/MavenTravisTestProject-0.0.1-SNAPSHOT.jar'
+  on:
+    repo: cfeier/Calculator
